@@ -98,6 +98,20 @@ if($action == "add_new_member"){
     include("public/claims_management/summery_claim.php");
 }else if($action == "claim_management_detail"){
     include("public/claims_management/cliams_detail.php");
+}else if($action == "crm_all_notes"){
+    include("public/crm/all_notes.php");
+}else if ($action == "crm_log_notes"){
+    include("public/crm/all_log.php");
+}else if($action == "crm_all_task"){
+    include("public/crm/all_task.php");
+}else if($action == "open_task"){
+    include("public/crm/open_task.php");
+}else if($action == "pending_task"){
+    include("public/crm/pending_task.php");
+}else if($action == "resolved_task"){
+    include("public/crm/resolved_task.php");
+}else if($action == "closed_task"){
+    include("public/crm/closed_task.php");
 }
 
 
