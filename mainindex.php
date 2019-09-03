@@ -1,5 +1,5 @@
 <?php
-	define('BASE_URL', 'http://localhost:80/rxv3/');
+	define('BASE_URL', 'http://localhost:80/Metronix_RxV3/');
 ?>
 
 <!DOCTYPE html>

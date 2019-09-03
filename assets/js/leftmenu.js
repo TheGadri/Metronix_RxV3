@@ -1,4 +1,4 @@
-var base_url = 'http://localhost:80/rxv3/';
+var base_url = 'http://localhost:80/Metronix_RxV3/';
 
 
 function current_show() {

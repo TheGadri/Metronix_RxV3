@@ -98,6 +98,10 @@ if($action == "add_new_member"){
     include("public/claims_management/summery_claim.php");
 }else if($action == "claim_management_detail"){
     include("public/claims_management/cliams_detail.php");
+} else if($action == "defaultBenefitChart"){
+    include("public/benefitsGroupsAndItems/defaultBenefitChart.php");
+} else if($action == "benefitGroups"){
+    include("public/benefitsGroupsAndItems/benefitGroups.php");
 }else if($action == "crm_all_notes"){
     include("public/crm/all_notes.php");
 }else if ($action == "crm_log_notes"){
