@@ -42,8 +42,8 @@
 											</li>
 											<li onclick="getstep('benefitGroups');" class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Benefit Groups</span></a>
 											</li>
-											<li onclick="getstep('company_benefitChart_addbenefit')"  class="kt-menu__item kt-menu__toggle " aria-haspopup="true"><a href="javascript:" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Add New Benefit Item</span></a></li>
-											<li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">List of Benefit Items</span></a></li>
+											<li onclick="getstep('company_benefitChart_addbenefit')"  class="kt-menu__item kt-menu__toggle" aria-haspopup="true"><a href="javascript:" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Add New Benefit Item</span></a></li>
+											<li onclick="getstep('list_of_benefit_items')" class="kt-menu__item kt-menu__toggle" aria-haspopup="true"><a href="javascript:" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">List of Benefit Items</span></a></li>
 										</ul>
 									</div>
 								</li>

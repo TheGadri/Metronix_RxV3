@@ -102,6 +102,10 @@ if($action == "add_new_member"){
     include("public/benefitsGroupsAndItems/defaultBenefitChart.php");
 } else if($action == "benefitGroups"){
     include("public/benefitsGroupsAndItems/benefitGroups.php");
+} else if($action == "list_of_benefit_items"){
+    include("public/benefitsGroupsAndItems/listOfBenefitItems.php");
+}  else if($action == "edit_benefit_items"){
+    include("public/benefitsGroupsAndItems/editBenefitItem.php");
 }
 
 
