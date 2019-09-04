@@ -464,7 +464,7 @@
                 </div>
             </div>
             <div class="col-md-8">
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-md-6">
                         <p class="font-weight-bold">CLAIM NUMBER: 11-32442342QDSAF-32423-423423WASDF</p>
                     </div>
@@ -531,6 +531,166 @@
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="kt-portlet" style="height:290px;overflow-y:scroll;">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">
+                                <span style="float:left;">
+                                    <a href="#"
+                                        onClick="getclaimno('forward_to_lab_administrative','claimsno_administrative','<?php echo $process_claim_no; ?>');"
+                                        class="btn btn-success">
+                                        <span style="color:white; font-weight:bold">Forward to Claims <span
+                                                class="glyphicon glyphicon-forward"></span>
+                                        </span>
+                                    </a> || <span><strong>Total Claim: GHC
+                                            <?php echo number_format($row_rsclaim_total['claim_total'],2);?></strong></span>
+
+                                </span></small>
+                            </h3>
+
+                        </div>
+                        <div class="kt-portlet__head-toolbar">
+                            <div class="kt-portlet__head-actions" style="float:right;">
+                                <div class="kt-subheader__breadcrumbs">
+                                    <span>Life Span of Claim: 7 Days More</span><br />
+                                    <span class="kt-font-success kt-font-boldest" style="cursor:pointer;">Claim No:
+                                        GHC011602589UT19</span>
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="portlet__body" style="min-height:290px;">
+                        <div id="claim_response">
+                            <div style="background:#FFF;">
+                                <table width="100%" border="0" align="center" cellpadding="1" cellspacing="1"
+                                    class="table table-bordered table-hover">
+
+                                    <thead class="thead-light">
+
+                                        <tr>
+
+                                            <td colspan="4"
+                                                style="font-size: 14px; text-align: center; border-bottom: solid 2px #0D4313; border-right: solid 2px #0D4313; color: blue;">
+                                                Requested: <?php echo $currency; ?>
+                                                <?php echo number_format($row_rsclaim_total['claim_total'],2);?></td>
+                                            <td colspan="3"
+                                                style="font-size: 14px; text-align: center; border-bottom: solid 2px #0D4313; color: green;">
+                                                Authorised: <?php echo $currency; ?>
+                                                <?php echo number_format($row_rsclaim_total_auth['claim_total'],2);?>
+                                            </td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td style="font-size: 12px;">Item</td>
+                                            <td style="font-size: 12px;">Rx Item Name</td>
+                                            <td style="font-size: 12px;">Auth</td>
+                                            <td
+                                                style="font-size: 12px; text-align:right;border-right: solid 2px #0D4313;">
+                                                Price&nbsp;&nbsp;&nbsp;</td>
+
+                                            <td>Price</td>
+                                            <td style="font-size: 12px;">Status</td>
+                                            <td style="font-size: 12px;">Action</td>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+
+                                        <tr>
+                                            <td>Registration</td>
+                                            <td>Registration</td>
+                                            <td>
+                                                <input name="itemauthorization<?php echo $row_rsclaim['id']; ?>"
+                                                    id="itemauthorization<?php echo $row_rsclaim['id']; ?>"
+                                                    onChange="getclaimno('updateauthorization_claim_details_administrative','claimsno_administrative',<?php echo $row_rsclaim['id']; ?>,this.value);"
+                                                    style="width:70px; <?php if($id==$row_rsclaim['id']){echo "border:solid red 1px ";}?>"
+                                                    placeholder="Code Required"
+                                                    value="<?php echo $row_rsclaim['authorization_code'];?>"></td>
+                                            <td style="text-align:right;border-right: solid 2px #0D4313;">
+
+
+                                                <input type="text" id="itemqty<?php echo $row_rsclaim['id']; ?>"
+                                                    name="itemqty<?php echo $row_rsclaim['id']; ?>"
+                                                    style="width:50px; text-align:right" min="1" value="20.00"
+                                                    <?php if($row_query_items['lock_price']=='yes'){?>
+                                                    readonly="readonly" <?php } ?>
+                                                    onChange="getclaimno('updateprice_claim_details_administrative','claimsno_administrative',<?php echo $row_rsclaim['id']; ?>,this.value);">
+
+                                            </td>
+                                            <td>20.00</td>
+                                            <td>approved</td>
+                                            <td>
+
+                                                <span style="font-weight:bold;">
+
+
+
+                                                    <a style="color:blue" href="#"
+                                                        onclick="getclaimno('del_claim_details_administrative_administrative','claimsno_administrative',<?php echo $row_rsclaim['id']; ?>);">
+                                                        <i class="icon-trash"></i></a>
+
+
+                                                </span>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>GP Consult</td>
+                                            <td>GP Consultation</td>
+                                            <td>
+                                                <input name="itemauthorization<?php echo $row_rsclaim['id']; ?>"
+                                                    id="itemauthorization<?php echo $row_rsclaim['id']; ?>"
+                                                    onChange="getclaimno('updateauthorization_claim_details_administrative','claimsno_administrative',<?php echo $row_rsclaim['id']; ?>,this.value);"
+                                                    style="width:70px; <?php if($id==$row_rsclaim['id']){echo "border:solid red 1px ";}?>"
+                                                    placeholder="Code Required"
+                                                    value="<?php echo $row_rsclaim['authorization_code'];?>"></td>
+                                            <td style="text-align:right;border-right: solid 2px #0D4313;">
+
+
+                                                <input type="text" id="itemqty<?php echo $row_rsclaim['id']; ?>"
+                                                    name="itemqty<?php echo $row_rsclaim['id']; ?>"
+                                                    style="width:50px; text-align:right" min="1" value="28.00"
+                                                    <?php if($row_query_items['lock_price']=='yes'){?>
+                                                    readonly="readonly" <?php } ?>
+                                                    onChange="getclaimno('updateprice_claim_details_administrative','claimsno_administrative',<?php echo $row_rsclaim['id']; ?>,this.value);">
+
+                                            </td>
+                                            <td>28.00</td>
+                                            <td>pending</td>
+                                            <td>
+
+                                                <span style="font-weight:bold;">
+
+
+
+                                                    <a style="color:blue" href="#"
+                                                        onclick="getclaimno('del_claim_details_administrative_administrative','claimsno_administrative',<?php echo $row_rsclaim['id']; ?>);">
+                                                        <i class="icon-trash"></i></a>
+
+
+                                                </span>
+
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+
+
                         </div>
                     </div>
                 </div>

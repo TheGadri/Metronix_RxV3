@@ -102,7 +102,7 @@
                                 </td>
                                 <td data-field="dropdown" class="kt-datatable__cell no_v"><span>
                                         <a title="details" class="btn btn-sm btn-clean btn-icon btn-icon-md"> <i
-                                                class="fa fa-play"></i> </a>
+                                                class="fa fa-play spin"></i> </a>
                                     </span>
                                 </td>
                                 <td data-field="consult_date" class="kt-datatable__cell no_v"><span>31/12/2000</span>

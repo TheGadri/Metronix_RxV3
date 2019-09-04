@@ -110,3 +110,11 @@ span.badge.badge-brand{
     background-color:#36b4ee;
     color:#fff;
 }
+
+a.btn i.fa.fa-play.spin:hover{
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}

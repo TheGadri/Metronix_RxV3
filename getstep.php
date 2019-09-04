@@ -120,5 +120,7 @@ if($action == "add_new_member"){
     include("public/crm/resolved_task.php");
 }else if($action == "closed_task"){
     include("public/crm/closed_task.php");
+}else if ($action == "uploaded_document"){
+    include("public/members/uploaded_document.php");
 }
 
