@@ -102,6 +102,10 @@ if($action == "add_new_member"){
     include("public/benefitsGroupsAndItems/defaultBenefitChart.php");
 } else if($action == "benefitGroups"){
     include("public/benefitsGroupsAndItems/benefitGroups.php");
+}else if($action == "list_of_benefit_items"){
+    include("public/benefitsGroupsAndItems/listOfBenefitItems.php");
+}  else if($action == "edit_benefit_items"){
+    include("public/benefitsGroupsAndItems/editBenefitItem.php");
 }else if($action == "crm_all_notes"){
     include("public/crm/all_notes.php");
 }else if ($action == "crm_log_notes"){
@@ -117,7 +121,4 @@ if($action == "add_new_member"){
 }else if($action == "closed_task"){
     include("public/crm/closed_task.php");
 }
-
-
-
 

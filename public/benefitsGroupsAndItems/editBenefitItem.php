@@ -202,16 +202,15 @@
             <div class="kt-portlet__head">
                 <div class="kt-portlet__head-label">
                     <div class="kt-portlet__head-title">
-                        New Item Details
+                       Update Item Details
                     </div>
                 </div>
             </div>
             <div class="kt-portlet__body">
-             <!--   <div class="row bg-secondary">
-                    <label for="" class="col-md-4 col-form-label kt-font-bold">Plan Name</label>
-                    <label for="" class="col-md-8 col-form-label kt-font-bold" name="plan_name">ANLG Pre
-                        Employment</label>
-                </div> -->
+                <div class="row bg-secondary">
+                    <label for="" class="col-md-4 col-form-label kt-font-bold">Item Name</label>
+                    <label for="" class="col-md-8 col-form-label kt-font-bold" name="item_name">GP Consultation</label>
+                </div>
                 <div class="row mt-3">
                     <label for="" class="col-md-4 col-form-label kt-font-bold">Parent Group</label>
                     <div class="col-md-8">
@@ -263,7 +262,7 @@
                 </div>
             </div>
             <div class="kt-portlet__foot kt-align-right">
-                <button class="btn btn-success btn-sm">Save</button>
+                <button class="btn btn-success btn-sm">Update</button>
                 <button class="btn btn-warning btn-sm">Reset</button>
             </div>
         </div>
