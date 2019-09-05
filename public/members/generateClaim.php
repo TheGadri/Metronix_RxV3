@@ -320,7 +320,7 @@
             <div class="btn-group">
                 <button type="button" class="btn btn-outline-success btn-sm"><i class="flaticon-upload"></i> Submit
                     Claim</button>
-                <button type="button" class="btn btn-outline-success dropdown-toggle dropdown-toggle-split btn-sm"
+                <!-- <button type="button" class="btn btn-outline-success dropdown-toggle dropdown-toggle-split btn-sm"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="sr-only">Toggle Dropdown</span>
                 </button>
@@ -328,142 +328,221 @@
                     style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(80px, 38px, 0px);">
                     <a class="dropdown-item" href="#"><i class="fa fa-print"></i> Print</a>
                     <a class="dropdown-item" href="#"><i class="flaticon-delete"></i> Delete</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
     <div class="kt-portlet__body">
         <div class="row">
             <div class="col-md-4">
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="search">Search</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"><span class="input-group-text"><i
-                                            class="flaticon-search"></i></span></div>
-                                <input type="text" class="form-control" name="search" id="search">
-                            </div>
-                            <div class="kt-radio-inline mt-2">
-                                <label class="kt-radio">
-                                    <input type="radio" name="searchType"> Begins With
-                                    <span></span>
-                                </label>
-                                <label class="kt-radio">
-                                    <input type="radio" name="searchType"> Contains
-                                    <span></span>
-                                </label>
+                <div class="kt-portlet">
+                    <div class="kt-portlet__head">
+                        <div class="row mt-3">
+                            <div class="col">
+                                <div class="row">
+                                    <label for="search">Search</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"><span class="input-group-text"><i
+                                                    class="flaticon-search"></i></span></div>
+                                        <input type="text" class="form-control" name="search" id="search">
+                                    </div>
+                                    <div class="kt-radio-inline mt-2">
+                                        <label class="kt-radio">
+                                            <input type="radio" name="searchType"> Begins With
+                                            <span></span>
+                                        </label>
+                                        <label class="kt-radio">
+                                            <input type="radio" name="searchType"> Contains
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="kt-section" style="height:400px; overflow-y: auto; dispaly:block">
-                    <div class="row">
-                        <div class="col">
-                            <div class="table-responsive">
-                                <table class="table table-striped">
-                                    <thead class="table-warning">
-                                        <tr>
-                                            <th>Code</th>
-                                            <th>Item Name</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Jhon</td>
-                                            <td>Stone</td>
-                                            <td>@jhon</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lisa</td>
-                                            <td>Nilson</td>
-                                            <td>@lisa</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lisa</td>
-                                            <td>Nilson</td>
-                                            <td>@lisa</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lisa</td>
-                                            <td>Nilson</td>
-                                            <td>@lisa</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lisa</td>
-                                            <td>Nilson</td>
-                                            <td>@lisa</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lisa</td>
-                                            <td>Nilson</td>
-                                            <td>@lisa</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lisa</td>
-                                            <td>Nilson</td>
-                                            <td>@lisa</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lisa</td>
-                                            <td>Nilson</td>
-                                            <td>@lisa</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lisa</td>
-                                            <td>Nilson</td>
-                                            <td>@lisa</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                    <div style="max-height:400px; overflow-y:auto;">
+                        <div class="table-responsive">
+                            <div class="kt-portlet__body kt-portlet__body--fit">
+                                <!--begin: Datatable -->
+                                <div class="kt-datatable kt-datatable--default kt-datatable--brand kt-datatable--loaded"
+                                    id="local_data">
+                                    <table class="table table-hover text-center">
+                                        <thead class="kt-datatable__head table-warning">
+                                            <tr class="kt-datatable__row" style="left: 0px;">
+                                                <th data-field="code"
+                                                    class="kt-datatable__cell kt-datatable__cell--sort">
+                                                    <span>Code</span></th>
+                                                <th data-field="payment_option"
+                                                    class="kt-datatable__cell kt-datatable__cell--sort">
+                                                    <span>Item Name</span></th>
+                                                <th data-field="actions"
+                                                    class="kt-datatable__cell kt-datatable__cell--sort">
+                                                    <span style="width: 100px;">Actions</span></th>
 
+                                            </tr>
+                                        </thead>
+                                        <tbody class="kt-datatable__body">
+                                            <tr data-row="0" class="kt-datatable__row" style="left: 0px;">
+                                                <td data-field="code" class="kt-datatable__cell no_v">
+                                                    <span>TUP</span>
+                                                </td>
+                                                <td data-field="payment_option" class="kt-datatable__cell no_v">
+                                                    <span>TOPUP</span>
+                                                </td>
+                                                <td data-field="actions" class="kt-datatable__cell"><span>
+                                                        <a title="add item"
+                                                            class="btn btn-sm btn-clean btn-icon btn-icon-md">
+                                                            <i class="flaticon-plus"></i> </a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr data-row="1" class="kt-datatable__row" style="left: 0px;">
+                                                <td data-field="code" class="kt-datatable__cell no_v">
+                                                    <span>TUP</span>
+                                                </td>
+                                                <td data-field="payment_option" class="kt-datatable__cell no_v">
+                                                    <span>TOPUP</span>
+                                                </td>
+                                                <td data-field="actions" class="kt-datatable__cell"><span>
+                                                        <a title="add item"
+                                                            class="btn btn-sm btn-clean btn-icon btn-icon-md">
+                                                            <i class="flaticon-plus"></i> </a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr data-row="2" class="kt-datatable__row" style="left: 0px;">
+                                                <td data-field="code" class="kt-datatable__cell no_v">
+                                                    <span>TUP</span>
+                                                </td>
+                                                <td data-field="payment_option" class="kt-datatable__cell no_v">
+                                                    <span>TOPUP</span>
+                                                </td>
+                                                <td data-field="actions" class="kt-datatable__cell"><span>
+                                                        <a title="add item"
+                                                            class="btn btn-sm btn-clean btn-icon btn-icon-md">
+                                                            <i class="flaticon-plus"></i> </a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr data-row="3" class="kt-datatable__row" style="left: 0px;">
+                                                <td data-field="code" class="kt-datatable__cell no_v">
+                                                    <span>TUP</span>
+                                                </td>
+                                                <td data-field="payment_option" class="kt-datatable__cell no_v">
+                                                    <span>TOPUP</span>
+                                                </td>
+                                                <td data-field="actions" class="kt-datatable__cell"><span>
+                                                        <a title="add item"
+                                                            class="btn btn-sm btn-clean btn-icon btn-icon-md">
+                                                            <i class="flaticon-plus"></i> </a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr data-row="0" class="kt-datatable__row" style="left: 0px;">
+                                                <td data-field="code" class="kt-datatable__cell no_v">
+                                                    <span>TUP</span>
+                                                </td>
+                                                <td data-field="payment_option" class="kt-datatable__cell no_v">
+                                                    <span>TOPUP</span>
+                                                </td>
+                                                <td data-field="actions" class="kt-datatable__cell"><span>
+                                                        <a title="add item"
+                                                            class="btn btn-sm btn-clean btn-icon btn-icon-md">
+                                                            <i class="flaticon-plus"></i> </a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr data-row="0" class="kt-datatable__row" style="left: 0px;">
+                                                <td data-field="code" class="kt-datatable__cell no_v">
+                                                    <span>TUP</span>
+                                                </td>
+                                                <td data-field="payment_option" class="kt-datatable__cell no_v">
+                                                    <span>TOPUP</span>
+                                                </td>
+                                                <td data-field="actions" class="kt-datatable__cell"><span>
+                                                        <a title="add item"
+                                                            class="btn btn-sm btn-clean btn-icon btn-icon-md">
+                                                            <i class="flaticon-plus"></i> </a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr data-row="0" class="kt-datatable__row" style="left: 0px;">
+                                                <td colspan="3" class="kt-datatable__cell no_v">
+                                                    <span class="kt-font-bold">Sorry, No item Found</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--end: Datatable -->
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-8">
+                <div class="kt-portlet">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">Claim NUmber:&nbsp; 213542636etgsf21254wtref</h3>
+                        </div>
+                        <div class="kt-portlet__head-toolbar">
+                            <div class="kt-portlet__head-actions">
+                                <a data-toggle="kt-tooltip" data-placement="top" title data-original-title="Print"
+                                    href="#" class="btn btn-clean btn-sm btn-icon btn-icon-md">
+                                    <i class="fa fa-print"></i>
+                                </a>
+                                <a data-toggle="kt-tooltip" data-placement="top" title data-original-title="Delete"
+                                    href="#" class="btn btn-clean btn-sm btn-icon btn-icon-md">
+                                    <i class="fa fa-trash-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <span>Total Claim: 0.00</span>
+                        <div class="table-responsive">
+                            <div class="kt-portlet__body kt-portlet__body--fit">
+                                <div
+                                    class="kt-datatable kt-datatable--default kt-datatable--brand kt-datatable--loaded">
+                                    <table class="table table-hover">
+                                        <thead class="border">
+                                            <tr>
+                                                <td colspan="6" class="border">Request: <span>&nbsp; 0.00</span>
+                                                </td>
+                                                <td class="border" colspan="7">Authorised : <span>&nbsp;
+                                                        0.00</span></td>
+                                            </tr>
+                                        </thead>
+                                        <thead class="table-warning">
+                                            <tr>
+                                                <th>Item</th>
+                                                <th>Auth No.</th>
+                                                <th>Qty</th>
+                                                <th>Cur</th>
+                                                <th>Price</th>
+                                                <th class="border-right">Total</th>
+                                                <th>Item</th>
+                                                <th>Qty</th>
+                                                <th>Price</th>
+                                                <th>Total</th>
+                                                <th>Action</th>
+                                                <th>Status</th>
+                                                <th>Reason</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center kt-font-bold" colspan="13">Sorry No data Found</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- <div class="row">
                     <div class="col-md-6">
                         <p class="font-weight-bold">CLAIM NUMBER: 11-32442342QDSAF-32423-423423WASDF</p>
@@ -534,7 +613,7 @@
                         </div>
                     </div>
                 </div> -->
-                <div class="kt-portlet" style="height:290px;overflow-y:scroll;">
+                <!-- <div class="kt-portlet" style="max-height:400px;overflow-y:scroll;">
                     <div class="kt-portlet__head">
                         <div class="kt-portlet__head-label">
                             <h3 class="kt-portlet__head-title">
@@ -693,7 +772,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -705,4 +784,6 @@
         autoclose: true,
         orientation: "bottom auto"
     });
+
+    $('[data-toggle="kt-tooltip"]').tooltip()
 </script>
