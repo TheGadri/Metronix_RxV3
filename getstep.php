@@ -120,5 +120,14 @@ if($action == "add_new_member"){
     include("public/crm/resolved_task.php");
 }else if($action == "closed_task"){
     include("public/crm/closed_task.php");
-}
-
+}else if($action == "member_reports"){
+    include("public/reportsManagement/memberReports.php");
+}else if($action == "claims_report"){
+    include("public/reportsManagement/claimsReport.php");
+}else if($action == "provider_items"){
+    include("public/admin_utility/providerItems.php");
+}else if($action == "add_provider_item"){
+    include("public/admin_utility/addProviderItem.php");
+}else if($action == "update_provider_item"){
+    include("public/admin_utility/updateProviderItem.php");
+} 
