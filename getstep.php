@@ -130,4 +130,30 @@ if($action == "add_new_member"){
     include("public/admin_utility/addProviderItem.php");
 }else if($action == "update_provider_item"){
     include("public/admin_utility/updateProviderItem.php");
-} 
+} else if ($action == "uploaded_document"){
+    include("public/members/uploaded_document.php");
+}else if($action == "system_users"){
+    include("public/admin_utility/system_users.php");
+}else if($action == "provider_items"){
+    include("public/admin_utility/provider_item.php");
+}else if($action == "service_add_user"){
+    include("public/admin_utility/add_user.php");
+}else if($action == "list_role"){
+    include("public/admin_utility/list_role.php");
+}else if($action == "permission"){
+    include("public/admin_utility/user_permission.php");
+}else if ($action == "edit_user"){
+    include("public/admin_utility/edit_user.php");
+}else if ($action == "service_provider"){
+    include("public/admin_utility/service_provider.php");
+}else if ($action == "system_updates"){
+    include("public/admin_utility/system_update.php");
+}else if ($action == "permission"){
+    include("public/admin_utility/user_permission.php");
+}else if($action == "security_levels"){
+    include("public/admin_utility/security_level.php");
+}else if($action == "edit_security_level"){
+    include("public/admin_utility/edit_security_level.php");
+}else if($action == "edit_role"){
+    include("public/admin_utility/edit_role.php");
+}

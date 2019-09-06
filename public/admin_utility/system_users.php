@@ -1,8 +1,11 @@
 <div class="kt-portlet kt-portlet--mobile">
-    <div class="kt-portlet__head">
+    <div class="kt-portlet__head kt-portlet__head--lg">
         <div class="kt-portlet__head-label">
+            <span class="kt-portlet__head-icon">
+                <i class="kt-font-brand flaticon-list-1"></i>
+            </span>
             <h3 class="kt-portlet__head-title">
-                List of Authorization
+                System Users
             </h3>
         </div>
         <div class="kt-portlet__head-toolbar">
@@ -15,12 +18,16 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-start"
                     style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(80px, 38px, 0px);">
-                    <a class="dropdown-item" href="javascript:;"><i class="flaticon-refresh"></i> Sync Authorization</a>
+                    <a onclick="getstep('service_add_user')" class="dropdown-item" href="javascript:;"><i class="la la-user-plus"></i>
+                        Add Users</a>
+                    <a onclick="getstep('list_role')" class="dropdown-item" href="javascript:;"><i class="la la-list-ul"></i>
+                        List of Roles</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="kt-portlet__body">
+        <!--begin: Search Form -->
         <div class="kt-form kt-form--label-right kt-margin-t-20 kt-margin-b-10">
             <div class="row align-items-center">
                 <div class="col-xl-8 order-2 order-xl-1">
@@ -42,13 +49,10 @@
                                 <div class="col-md-5">
                                     <select class="form-control" id="search_by" name="search_by">
                                         <option disabled selected>Search By</option>
-                                        <option value="surname">Surname</option>
-                                        <option value="firstname">Firstname</option>
-                                        <option value="gender">Gender</option>
-                                        <option value="hasId">HAS Member Id</option>
-                                        <option value="relationshipType">Relationship Type</option>
-                                        <option value="healthPlan">Health Plan</option>
-                                        <option value="status">Status</option>
+                                        <option value="surname">Name</option>
+                                        <option value="firstname">Username</option>
+                                        <option value="gender">Permission</option>
+                                        <option value="hasId">Security Level</option>
                                     </select>
                                 </div>
                             </div>
@@ -58,9 +62,9 @@
             </div>
         </div>
         <!--end: Search Form -->
-        <div class="table-responsive">
-            <div class="kt-portlet__body kt-portlet__body--fit">
-                <!--begin: Datatable -->
+        <div class="kt-portlet__body kt-portlet__body--fit">
+            <!--begin: Datatable -->
+            <div class="table-responsive" style="max-height:600px">
                 <div class="kt-datatable kt-datatable--default kt-datatable--brand kt-datatable--loaded" id="local_data"
                     style="">
                     <table class="table table-hover">
@@ -68,95 +72,57 @@
                             <tr class="kt-datatable__row p-5" style="left: 0px;">
                                 <th data-field="id" class="kt-datatable__cell kt-datatable__cell--sort"><span></span>
                                 </th>
-                                <th data-field="dropdown" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span></span></th>
-                                <th data-field="consult_date" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span>Consult. Date</span></th>
-                                <th data-field="facility_name" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span>Facility Name</span></th>
-                                <th data-field="case_no" class="kt-datatable__cell kt-datatable__cell--sort"><span>Case
-                                        No.</span></th>
-                                <th data-field="auth_no" class="kt-datatable__cell kt-datatable__cell--sort"><span>Auth
-                                        No.</span>
-                                </th>
                                 <th data-field="name" class="kt-datatable__cell kt-datatable__cell--sort">
                                     <span>Name</span>
                                 </th>
-                                <th data-field="member_no" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span>Member No.</span></th>
-                                <th data-field="request_amt" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span>Request Amt.</span>
+                                <th data-field="username" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span>Username</span></th>
+                                <th data-field="email_address" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span>Email Address</span></th>
+                                <th data-field="permission" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span>Permission Role</span></th>
+                                <th data-field="security_lvl" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span>Security Level</span>
                                 </th>
-                                <th data-field="auth_amt" class="kt-datatable__cell kt-datatable__cell--sort"><span>Auth
-                                        Amt.</span>
+                                <th data-field="action" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span>Action</span>
                                 </th>
-                                <th data-field="staus" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span>Staus</span></th>
-
                             </tr>
                         </thead>
                         <tbody class="kt-datatable__body">
-                            <tr onclick="getstep('detail_auth')" data-row="0" class="kt-datatable__row"
-                                style="left: 0px;">
-                                <td data-field="id" class="kt-datatable__cell no_v"><span>Doe</span>
+                            <tr data-row="1" class="kt-datatable__row">
+                                <td class="kt-datatable__cell no_v">1</td>
+                                <td class="kt-datatable__cell no_v">Emmanuel Amponsah</td>
+                                <td class="kt-datatable__cell no_v">Emmanuel Amponsah</td>
+                                <td class="kt-datatable__cell no_v">Emmanuel@gmail.com</td>
+                                <td class="kt-datatable__cell no_v">Champion</td>
+                                <td class="kt-datatable__cell no_v">Administrator</td>
+                                <td class="kt-datatable__cell no_v">
+                                    <div class="btn-group">
+                                        <button onclick="getstep('permission')" type="button" class="btn btn-outline-brand btn-sm"><i
+                                                class="fa fa-user-lock"></i>
+                                            Permission</button>
+                                        <button type="button"
+                                            class="btn btn-outline-brand dropdown-toggle dropdown-toggle-split btn-sm"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-start"
+                                            style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(80px, 38px, 0px);">
+                                            <a onclick="getstep('service_provider')" class="dropdown-item" href="javascript:;"><i
+                                                    class="fa fa-hospital"></i>
+                                                Service Providers</a>
+                                            <a onclick="getstep('edit_user')" class="dropdown-item" href="javascript:;"><i
+                                                    class="fa fa-edit"></i>
+                                                Edit</a>
+                                            <a onclick="getstep('')" class="dropdown-item" href="javascript:;"><i
+                                                    class="fa fa-trash-alt"></i>
+                                                Delete</a>
+                                        </div>
+                                    </div>
                                 </td>
-                                <td data-field="dropdown" class="kt-datatable__cell no_v"><span>
-                                        <a title="details" class="btn btn-sm btn-clean btn-icon btn-icon-md"> <i
-                                                class="fa fa-play spin"></i> </a>
-                                    </span>
-                                </td>
-                                <td data-field="consult_date" class="kt-datatable__cell no_v"><span>31/12/2000</span>
-                                </td>
-                                <td data-field="facility_name" class="kt-datatable__cell no_v"><span>Enclave</span></td>
-                                <td data-field="case_no" class="kt-datatable__cell no_v"><span>UBAH000</span></td>
-                                <td data-field="auth_no" class="kt-datatable__cell no_v"><span>55003300k3</span>
-                                </td>
-                                <td data-field="name" class="kt-datatable__cell no_v"><span>Charles</span>
-                                </td>
-                                <td data-field="member_no" class="kt-datatable__cell no_v"><span>
-                                        <span>55003300k3</span></span>
-                                </td>
-                                <td data-field="request_amt" class="kt-datatable__cell no_v"><span>
-                                        0.00
-                                    </span>
-                                </td>
-                                <td data-field="auth_amt" class="kt-datatable__cell no_v"><span>0.00</span>
-                                </td>
-                                <td data-field="status" class="kt-datatable__cell no_v"><span>
-                                        <span class="kt-font-bold kt-font-success">Active</span></span>
-                                </td>
-                            </tr>
-                            <tr onclick="getstep('detail_auth')" data-row="0" class="kt-datatable__row"
-                                style="left: 0px;">
-                                <td data-field="id" class="kt-datatable__cell no_v"><span>Doe</span>
-                                </td>
-                                <td data-field="dropdown" class="kt-datatable__cell no_v"><span>
-                                        <a title="details" class="btn btn-sm btn-clean btn-icon btn-icon-md"> <i
-                                                class="fa fa-play"></i> </a>
-                                    </span>
-                                </td>
-                                <td data-field="consult_date" class="kt-datatable__cell no_v"><span>31/12/2000</span>
-                                </td>
-                                <td data-field="facility_name" class="kt-datatable__cell no_v"><span>Enclave</span></td>
-                                <td data-field="case_no" class="kt-datatable__cell no_v"><span>UBAH000</span></td>
-                                <td data-field="auth_no" class="kt-datatable__cell no_v"><span>55003300k3</span>
-                                </td>
-                                <td data-field="name" class="kt-datatable__cell no_v"><span>Charles</span>
-                                </td>
-                                <td data-field="member_no" class="kt-datatable__cell no_v"><span>
-                                        <span>55003300k3</span></span>
-                                </td>
-                                <td data-field="request_amt" class="kt-datatable__cell no_v"><span>
-                                        0.00
-                                    </span>
-                                </td>
-                                <td data-field="auth_amt" class="kt-datatable__cell no_v"><span>0.00</span>
-                                </td>
-                                <td data-field="status" class="kt-datatable__cell no_v"><span>
-                                        <span class="kt-font-bold text-error">In active</span></span>
-                                </td>
-                            </tr>
 
+                            </tr>
                         </tbody>
                     </table>
                     <div class="kt-datatable__pager kt-datatable--paging-loaded">
@@ -213,12 +179,8 @@
                         </div>
                     </div>
                 </div>
-                <!--end: Datatable -->
             </div>
+            <!--end: Datatable -->
         </div>
     </div>
 </div>
-
-
-
-
