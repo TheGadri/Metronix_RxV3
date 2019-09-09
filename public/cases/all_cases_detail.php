@@ -1,8 +1,12 @@
 <div class="kt-portlet">
     <div class="kt-portlet__head">
         <div class="kt-portlet__head-label">
+        <div class="kt-portlet__head-group mr-3">
+				<a data-toggle="collapse" href="#collapseDetail" data-ktportlet-tool="toggle" class="btn btn-sm btn-icon btn-default btn-pill btn-icon-md"
+					><i class="la la-angle-down"></i></a>
+			</div>
             <h3 class="kt-portlet__head-title">
-                <i class="flaticon-user"></i> Membership Information
+                 Membership Information
             </h3>
         </div>
         <div class="kt-portlet__head-toolbar">
@@ -21,8 +25,8 @@
             </div>
         </div>
     </div>
-    <div class="kt-portlet__body" style="height:500px; overflow-y: auto;">
-        <div class="row">
+    <div class="collapse" id="collapseDetail" style="height:500px; overflow-y: auto;">
+        <div class="row mt-5 mb-3">
             <div class="col-md-2 text-center">
                 <img src="http://localhost:80/rxv3/assets/media/users/100_2.jpg" alt="" class="img-thumbnail">
             </div>
